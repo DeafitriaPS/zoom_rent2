@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html {
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.background {
+    padding: 0 25px 25px;
+    position: relative;
+    width: 100%;
+}
+
+/* .background::after {
+    content: '';
+    background: #60a9ff;
+    background: -moz-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
+    background: -webkit-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
+    background: linear-gradient(to bottom, #60a9ff 0%, #4394f4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#60a9ff', endColorstr='#4394f4', GradientType=0);
+    height: 350px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+} */
+
+.background::after {
+    content: "";
+    background: #131c24;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00b909', endColorstr='#00b909', GradientType=0);
+    height: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    top: 0;
+    width: 95%;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+@media (min-width: 900px) {
+    .background {
+        padding: 0 0 25px;
+    }
+}
+
+.line {
+    border-top: 2px solid #09447C;
+    width: 10%;
+    margin: 25px auto 50px;
+}
+
+.pricing {
+    color: #09447C;
+}
+
+.pricing-container {
+    margin: 0 auto;
+    padding: 50px 0 0;
+    max-width: 1130px;
+    width: 100%;
+}
+
+.panel {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.pricing-table {
+    box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.09), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 9px 20px 7px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 900px) {
+    .pricing-table {
+        flex-direction: row;
+    }
+}
+
+.pricing-table * {
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+.pricing-plan {
+    border-bottom: 1px solid #bfbfbf;
+    padding: 25px;
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+@media (min-width: 900px) {
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #bfbfbf;
+        flex-basis: 100%;
+        padding: 25px 50px;
+    }
+
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+}
+
+.pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.pricing-header {
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 15px;
+}
+
+.pricing-tag {
+    color: #888;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.pricing-type {
+    color: #09447C;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pricing-features {
+    color: #888;
+    /* border-top: 1px solid #e1f1ff; */
+    /* font-weight: 600; */
+    letter-spacing: 1px;
+    margin: 25px 0 25px;
+}
+
+.pricing-features-item {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+/* .pricing-features-item:last-child {
+    border-bottom: 1px solid #e1f1ff;
+} */
+
+.pricing-price {
+    color: #09447C;
+    border-top: 1px solid #bfbfbf;
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+.pricing-detail {
+    color: #888;
+    border-bottom: 1px solid #bfbfbf;
+    font-size: 9px;
+    padding-bottom: 15px;
+}
+
+.pricing-button {
+    /* border: 1px solid #9dd1ff; */
+    background-color: #dea12c;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    margin: 10px 0 25px;
+    padding: 5px 25px;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+    background-color: #ffdb96;
+    color: #fff;
+}
+
+.pricing-button.is-featured {
+    background-color: #49aaff;
+    color: #fff;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:active {
+    background-color: #269aff;
+}
