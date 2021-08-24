@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Pemilik - Klinik App</title>
+    <title>Admin - Sewa Zoom RadNext</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.3/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -38,7 +38,7 @@
 
                     </div>
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link collapsed <?php if ($title == 'Tambah Transaksi') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_transaksi'); ?>">
                             <i class="fas fa-plus"></i>
                             <span> </span>
@@ -50,7 +50,7 @@
                             <i class="fas fa-fw fa-dollar-sign"></i>
                             <span></span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <!-- 
                     <li class="nav-item">
@@ -67,15 +67,15 @@
                     </div>
 
                     <li class="nav-item">
-                        <a class="nav-link <?php if ($title == 'Tambah Barang') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_barang'); ?>">
-                            <i class="fas fa-fw fa-plus"></i>
+                        <a class="nav-link <?php if ($title == 'Data Pesanan') echo 'active' ?>" href="<?= base_url('pages/datapesanan'); ?>">
+                            <i class="fas fa-fw fa-plus"></i>Data Pesanan
                             <span></span>
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link <?php if ($title == 'List Barang') echo 'active' ?>" href="<?= base_url('/pemilik/list_barang'); ?>">
-                            <i class="fas fa-fw fa-clipboard-list"></i>
+                            <i class="fas fa-fw fa-plus"></i>Stock Zoom
                             <span></span>
                         </a>
                     </li>
@@ -89,17 +89,17 @@
 
                     <li class="nav-item">
                         <a class="nav-link <?php if ($title == 'Tambah Pegawai') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_pegawai'); ?>">
-                            <i class="fas fa-fw fa-plus"></i>
+                            <i class="fas fa-fw fa-clipboard-list"></i>Transaksi Selesai
                             <span></span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link <?php if ($title == 'List Pegawai') echo 'active' ?>" href="<?= base_url('/pemilik/list_pegawai'); ?>">
-                            <i class="fas fa-fw fa-clipboard-list"></i>
+                            <i class="fas fa-fw fa-clipboard-list"></i>Data Penjualan
                             <span></span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <hr class="sidebar-divider">
 
@@ -126,7 +126,7 @@
                         <ul class="nav navbar-nav flex-nowrap ml-auto">
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Pemilik</span></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Admin</span></a>
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in">
                                         <a class="dropdown-item" href="<?= base_url('/'); ?>"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
@@ -141,7 +141,7 @@
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Toko Bangunan</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © RadNext</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

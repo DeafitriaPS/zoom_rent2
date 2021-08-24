@@ -51,4 +51,12 @@ class Pages extends BaseController
 		];
 		return view('pages/admin/dashboard', $data);
 	}
+
+	public function datapesanan()
+	{
+		$data = [
+			'title' => 'Data Pesanan'
+		];
+		return view('pages/admin/datapesanan', $data);
+	}
 }
