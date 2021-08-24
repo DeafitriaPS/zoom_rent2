@@ -20,7 +20,7 @@
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-dark p-0">
             <div class="container-fluid d-flex flex-column p-0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-text mx-3"><span>Toko Bangunan</span></div>
+                    <div class="sidebar-brand-text mx-3"><span>Sewa Zoom</span></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
@@ -35,20 +35,20 @@
                     <hr class="sidebar-divider">
 
                     <div class="sidebar-heading">
-                        Keuangan
+
                     </div>
 
                     <li class="nav-item">
                         <a class="nav-link collapsed <?php if ($title == 'Tambah Transaksi') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_transaksi'); ?>">
                             <i class="fas fa-plus"></i>
-                            <span> Tambah Transaksi</span>
+                            <span> </span>
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link collapsed <?php if ($title == 'Transaksi') echo 'active' ?>" href="<?= base_url('/pemilik/transaksi'); ?>">
                             <i class="fas fa-fw fa-dollar-sign"></i>
-                            <span>Catatan Transaksi</span>
+                            <span></span>
                         </a>
                     </li>
 
@@ -63,20 +63,20 @@
                     <hr class="sidebar-divider">
 
                     <div class="sidebar-heading">
-                        Barang
+
                     </div>
 
                     <li class="nav-item">
                         <a class="nav-link <?php if ($title == 'Tambah Barang') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_barang'); ?>">
                             <i class="fas fa-fw fa-plus"></i>
-                            <span>Tambah Barang</span>
+                            <span></span>
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link <?php if ($title == 'List Barang') echo 'active' ?>" href="<?= base_url('/pemilik/list_barang'); ?>">
                             <i class="fas fa-fw fa-clipboard-list"></i>
-                            <span>List Barang</span>
+                            <span></span>
                         </a>
                     </li>
 
@@ -84,20 +84,20 @@
                     <hr class="sidebar-divider">
 
                     <div class="sidebar-heading">
-                        Pegawai
+
                     </div>
 
                     <li class="nav-item">
                         <a class="nav-link <?php if ($title == 'Tambah Pegawai') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_pegawai'); ?>">
                             <i class="fas fa-fw fa-plus"></i>
-                            <span>Tambah Pegawai</span>
+                            <span></span>
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link <?php if ($title == 'List Pegawai') echo 'active' ?>" href="<?= base_url('/pemilik/list_pegawai'); ?>">
                             <i class="fas fa-fw fa-clipboard-list"></i>
-                            <span>List Pegawai</span>
+                            <span></span>
                         </a>
                     </li>
 
