@@ -12,6 +12,15 @@
   <!-- My CSS -->
   <link rel="stylesheet" href="/css/style.css">
 
+  <!-- Javascript -->
+  <!-- <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" />
+  <script src="js/mobiscroll.javascript.min.js"></script> -->
+  <script src="js/datepick.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" />
+
   <title><?= $title; ?></title>
 </head>
 
