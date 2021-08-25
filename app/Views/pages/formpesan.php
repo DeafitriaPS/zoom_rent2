@@ -60,16 +60,7 @@
                                     });
                                 </script>
                             </div>
-                            <div class="mbsc-grid">
-                                <div class="mbsc-row">
-                                    <div class="mbsc-col-sm-12 mbsc-col-md-4">
-                                        <div class="mbsc-form-group">
-                                            <div class="mbsc-form-group-title">Max days</div>
-                                            <div id="demo-max-days"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <button class="btn btn-primary btn-block" type="submit">Submit</button>
 
                             <!-- <div class="row justify-content-start mt-4">
