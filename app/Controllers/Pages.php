@@ -36,6 +36,14 @@ class Pages extends BaseController
 		return view('pages/contact', $data);
 	}
 
+	public function pembayaran()
+	{
+		$data = [
+			'title' => 'Pembayaran'
+		];
+		return view('pages/pembayaran', $data);
+	}
+
 	public function dashboard()
 	{
 		$data = [
