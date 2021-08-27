@@ -46,10 +46,9 @@
                                     <input type="text" class="form-control" placeholder="Alamat Domisili" name="alamat" required>
                                 </div>
                             </div>
-                            <div class="row align-items-center">
+                            <!-- <div class="row align-items-center">
                                 <div class="col mt-4">
                                     <label class="form-label">Tanggal Peminjaman</label>
-                                    <!-- <input type="date" class="form-control" name="tanggalpeminjaman" required> -->
                                     <input type="text" class="form-control date" name="tanggalpeminjaman" required>
                                 </div>
                                 <script id="rendered-js">
@@ -59,9 +58,9 @@
                                         selectMax: 3
                                     });
                                 </script>
-                            </div>
+                            </div> -->
 
-                            <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                            <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>
 
                             <!-- <div class="row justify-content-start mt-4">
                                 <div class="col">
