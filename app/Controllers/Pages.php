@@ -20,6 +20,14 @@ class Pages extends BaseController
 		return view('pages/about', $data);
 	}
 
+	public function contact()
+	{
+		$data = [
+			'title' => 'Contact Me'
+		];
+		return view('pages/contact', $data);
+	}
+
 	public function formpesan()
 	{
 		$data = [
@@ -28,12 +36,20 @@ class Pages extends BaseController
 		return view('pages/formpesan', $data);
 	}
 
-	public function contact()
+	public function formpesan2()
 	{
 		$data = [
-			'title' => 'Contact Me'
+			'title' => 'Form Pesan'
 		];
-		return view('pages/contact', $data);
+		return view('pages/formpesan2', $data);
+	}
+
+	public function pembayaran()
+	{
+		$data = [
+			'title' => 'Pembayaran'
+		];
+		return view('pages/pembayaran', $data);
 	}
 
 	public function dashboard()
