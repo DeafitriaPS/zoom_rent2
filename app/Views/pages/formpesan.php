@@ -5,7 +5,7 @@
     <div class="row">
         <section>
             <div class="container py-4">
-                <form action="<?= base_url('/formpesan/save_formpesan'); ?>" method="post">
+                <form action="<?= base_url('/tamu/save_formpesan'); ?>" method="post">
                     <?= csrf_field(); ?>
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-8 col-lg-8 col-xl-6">
@@ -46,19 +46,18 @@
                                     <input type="text" class="form-control" placeholder="Alamat Domisili" name="alamat" required>
                                 </div>
                             </div>
-                            <!-- <div class="row align-items-center">
+                            <div class="row align-items-center">
                                 <div class="col mt-4">
                                     <label class="form-label">Tanggal Peminjaman</label>
                                     <input type="text" class="form-control date" name="tanggalpeminjaman" required>
                                 </div>
                                 <script id="rendered-js">
                                     $('.date').datepicker({
-                                        multidate: true,
+                                        multidate: 1,
                                         format: 'dd-mm-yyyy',
-                                        selectMax: 3
                                     });
                                 </script>
-                            </div> -->
+                            </div>
 
                             <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>
 
