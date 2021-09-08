@@ -17,21 +17,6 @@ html {
     width: 100%;
 }
 
-/* .background::after {
-    content: '';
-    background: #60a9ff;
-    background: -moz-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
-    background: -webkit-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
-    background: linear-gradient(to bottom, #60a9ff 0%, #4394f4 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#60a9ff', endColorstr='#4394f4', GradientType=0);
-    height: 350px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-} */
-
 .background::after {
     content: "";
     background: #131c24;
@@ -157,10 +142,6 @@ html {
 ul {
     padding-left: 0;
 }
-
-/* .pricing-features-item:last-child {
-    border-bottom: 1px solid #e1f1ff;
-} */
 
 .pricing-price {
     color: #09447C;

@@ -60,19 +60,6 @@
                             </div>
 
                             <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>
-
-                            <!-- <div class="row justify-content-start mt-4">
-                                <div class="col">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            I Read and Accept <a href="https://www.froala.com">Terms and Conditions</a>
-                                        </label>
-                                    </div>
-
-                                    <button class="btn btn-primary mt-4">Submit</button>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </form>
