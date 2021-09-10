@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TamuModel extends Model
+class PesananModel extends Model
 {
 	protected $table = 'tbl_formpesan';
 	protected $primaryKey = 'id_pesan';

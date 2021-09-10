@@ -25,82 +25,86 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Tanggal</th>
-                            <th>Nama </th>
+                            <th>Nama</th>
                             <th>Email</th>
-                            <th>Nominal</th>
-                            <th>Jenis Paket</th>
+                            <th>Instansi</th>
+                            <th>Telp</th>
+                            <th>Tanggal Peminjaman</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <button class="btn btn-primary btn-sm d-none d-sm-inline-block" data-toggle="modal" data-target="#modalKonfirm">Konfirmasi</button>
-                                <button class="btn btn-success btn-sm d-none d-sm-inline-block" data-toggle="modal" data-target="#modalKonfirm">Detail</button>
-                            </td>
-                        </tr>
+                        <?php $i = 1; ?>
+                        <?php foreach ($datapesanan as $u) : ?>
+                            <?php $id = $u['id_pesan']; ?>
+                            <tr>
 
-                        <!-- Modal Konfirmasi -->
-                        <div class="modal fade mt-5 pt-5" id="modalKonfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Hapus Transaksi</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                                <td><?= $i++; ?></td>
+                                <td><?= $u['nama']; ?></td>
+                                <td><?= $u['email']; ?></td>
+                                <td><?= $u['instansi']; ?></td>
+                                <td><?= $u['telp']; ?></td>
+                                <td><?= $u['tanggalpeminjaman']; ?></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm d-none d-sm-inline-block" data-toggle="modal" data-target="#modalKonfirm">Konfirmasi</button>
+                                    <button class="btn btn-success btn-sm d-none d-sm-inline-block" data-toggle="modal" data-target="#modalKonfirm">Detail</button>
+                                </td>
+                            </tr>
+
+                            <!-- Modal Konfirmasi -->
+                            <div class="modal fade mt-5 pt-5" id="modalKonfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Hapus Transaksi</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form action="" method="post">
+                                            <div class="modal-body">
+                                                <p>Apakah benar anda ingin menghapus data ini?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                <button type="submit" name="submit" class="btn btn-primary">Konfirmasi</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <form action="" method="post">
-                                        <div class="modal-body">
-                                            <p>Apakah benar anda ingin menghapus data ini?</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                            <button type="submit" name="submit" class="btn btn-primary">Konfirmasi</button>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Akhir Modal -->
+                            <!-- Akhir Modal -->
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Edit Transaksi</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Edit Transaksi</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form action="" method="post">
+                                            <div class="modal-body">
+                                                <div class="form-group"><label for="productname"><strong>Keterangan</strong></label>
+                                                    <input class="form-control" type="text" value="" name="nama_transaksi" required>
+                                                </div>
+
+                                                <div class="form-group"><label for="productname"><strong>Nominal</strong></label>
+                                                    <input class="form-control" type="text" value="" name="nominal" required>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                                <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <form action="" method="post">
-                                        <div class="modal-body">
-                                            <div class="form-group"><label for="productname"><strong>Keterangan</strong></label>
-                                                <input class="form-control" type="text" value="" name="nama_transaksi" required>
-                                            </div>
-
-                                            <div class="form-group"><label for="productname"><strong>Nominal</strong></label>
-                                                <input class="form-control" type="text" value="" name="nominal" required>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                            <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Akhir Modal -->
-
+                            <!-- Akhir Modal -->
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
@@ -110,4 +114,5 @@
     <!-- batas tabel -->
 
 </div>
+
 <?= $this->endSection(); ?>

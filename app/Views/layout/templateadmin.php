@@ -26,7 +26,7 @@
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
 
                     <li class="nav-item">
-                        <a class="nav-link  <?php if ($title == 'Dashboard') echo 'active' ?>" href="<?= base_url('/pemilik'); ?>">
+                        <a class="nav-link  <?php if ($title == 'Dashboard') echo 'active' ?>" href="<?= base_url('pages/dashboard'); ?>">
                             <i class="fas fa-tachometer-alt"></i>
                             <span>Dashboard</span>
                         </a>

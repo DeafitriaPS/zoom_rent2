@@ -3,21 +3,21 @@
 
 namespace App\Controllers;
 
-use App\Models\TamuModel;
+use App\Models\PesananModel;
 
 class Tamu extends BaseController
 {
 
-	protected $tamuModel;
+	protected $pesananModel;
 
 	public function __construct()
 	{
-		$this->tamuModel = new TamuModel();
+		$this->pesananModel = new PesananModel();
 	}
 
 	public function save_formpesan()
 	{
-		$this->tamuModel->save([
+		$this->pesananModel->save([
 			'nama' => $this->request->getVar('nama'),
 			'email' => $this->request->getVar('email'),
 			'telp' => $this->request->getVar('telp'),
