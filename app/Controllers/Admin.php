@@ -40,10 +40,10 @@ class Admin extends BaseController
 			return redirect()->to(base_url('login'));
 		}
 
-		$datapesanan = $this->AdminModel->findAll();
+		$datapesanan = $this->pesananModel->findAll();
 		$data = [
-			'title' => 'List Barang',
-			'barang' => $datapesanan
+			'title' => 'Data Pesanan',
+			'datapesanan' => $datapesanan
 		];
 		return view('pages/admin/datapesanan', $data);
 	}
