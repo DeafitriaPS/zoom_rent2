@@ -1,9 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-
 <div class="container">
-
     <div class="row">
         <div class="col-md-6 offset-md-3 py-3">
             <div class="card">
@@ -16,7 +14,7 @@
                     <h6 class="card-subtitle mb-2 text-muted">A/N PT.Radnet Digital Indonesia</h6>
                     <p class="card-text">Mandiri Syariah</p>
                     <p class="lead">Total Pembayaran Rp<strong>123.123</strong></p>
-                    <p class="lead">Kode Pembayaran <strong></strong></p>
+                    <p class="lead">Kode Pembayaran <strong><?php echo ($kode) ? $kode : ''; ?></strong></p>
                     <p>Jika sudah melakukan transfer, segera<br> mengunggah bukti transfer</p>
                     <p>
                     <div class="row justify-content-center">
@@ -33,5 +31,4 @@
         </div>
     </div>
 </div>
-
 <?= $this->endSection(); ?>

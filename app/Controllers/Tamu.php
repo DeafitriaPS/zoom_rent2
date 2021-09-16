@@ -9,26 +9,41 @@ class Tamu extends BaseController
 {
 
 	protected $pesananModel;
+	protected $session;
+
 
 	public function __construct()
 	{
 		$this->pesananModel = new PesananModel();
+		$this->session = \Config\Services::session();
+		$this->session->start();
 	}
 
 	public function save_formpesan()
 	{
+		$DataNoPembayaran = $this->tambahpembayaran();
+
 		$this->pesananModel->save([
 			'nama' => $this->request->getVar('nama'),
 			'email' => $this->request->getVar('email'),
 			'telp' => $this->request->getVar('telp'),
 			'instansi' => $this->request->getVar('instansi'),
 			'alamat' => $this->request->getVar('alamat'),
-			'tanggalpeminjaman' => $this->request->getVar('tanggalpeminjaman')
-
+			'tanggalpeminjaman' => $this->request->getVar('tanggalpeminjaman'),
+			'no_pembayaran' => $DataNoPembayaran
 		]);
 
+		$this->session->setFlashdata('kode', $DataNoPembayaran);
+		$page['title'] = "Pembayaran";
+		$page['kode'] = $this->session->getFlashdata('kode');
+		echo view('/pages/pembayaran', $page);
 
-		return redirect()->to('/pages/pembayaran');
+		//redirect to some function
+		// return redirect()->to('/pages/pembayaran');
+
+
+		//echo in view or controller
+
 	}
 
 
@@ -36,15 +51,13 @@ class Tamu extends BaseController
 	{
 
 		// Generate no pembayaran
-		$cekPembayaran = $this->TamuModel->countPembayaran() + 1;
+		$cekPembayaran = $this->pesananModel->countPembayaran() + 1;
+
 		$noPembayaran = 'P' . $cekPembayaran;
 
 		// Input Pembayaran
-		$this->TamuModel->tambahDataPembayaran($noPembayaran);
-
-
-
-		$this->session->set_flashdata('nomor', $noPembayaran);
+		$this->pesananModel->tambahDataPembayaran($noPembayaran);
+		return $noPembayaran;
 	}
 
 	public function tambah_formpesan()

@@ -13,15 +13,18 @@ class PesananModel extends Model
 
 	public function countPembayaran()
 	{
-		return $this->db->get('tbl_formpesan')->num_rows();
+		return $this->db->table('tbl_formpesan')->countAll();
 	}
 	public function tambahDataPembayaran($noPembayaran)
 	{
+		$pesananModel = new PesananModel();
+
 		$data = [
 			'no_pembayaran' => $noPembayaran,
 			'status' => '0'
 		];
 
-		$this->db->insert('tbl_formpesan', $data);
+		// return $this->db->insert('tbl_formpesan', $data);
+		$pesananModel->insert($data);
 	}
 }
