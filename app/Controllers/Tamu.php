@@ -21,7 +21,7 @@ class Tamu extends BaseController
 
 	public function save_formpesan()
 	{
-		$DataNoPembayaran = $this->tambahpembayaran();
+		$noPembayaran = $this->tambahpembayaran();
 
 		$this->pesananModel->save([
 			'nama' => $this->request->getVar('nama'),
@@ -30,10 +30,10 @@ class Tamu extends BaseController
 			'instansi' => $this->request->getVar('instansi'),
 			'alamat' => $this->request->getVar('alamat'),
 			'tanggalpeminjaman' => $this->request->getVar('tanggalpeminjaman'),
-			'no_pembayaran' => $DataNoPembayaran
+			'no_pembayaran' => $noPembayaran
 		]);
 
-		$this->session->setFlashdata('kode', $DataNoPembayaran);
+		$this->session->setFlashdata('kode', $noPembayaran);
 		$page['title'] = "Pembayaran";
 		$page['kode'] = $this->session->getFlashdata('kode');
 		echo view('/pages/pembayaran', $page);
@@ -56,22 +56,22 @@ class Tamu extends BaseController
 		$noPembayaran = 'P' . $cekPembayaran;
 
 		// Input Pembayaran
-		$this->pesananModel->tambahDataPembayaran($noPembayaran);
+		// $this->pesananModel->tambahDataPembayaran($noPembayaran);
 		return $noPembayaran;
 	}
 
-	public function tambah_formpesan()
-	{
+	// public function tambah_formpesan()
+	// {
 
-		$data = [
-			'title' => 'Tambah Formpesan',
-		];
-		return view('pages/formpesan', $data);
-	}
+	// 	$data = [
+	// 		'title' => 'Tambah Formpesan',
+	// 	];
+	// 	return view('pages/formpesan', $data);
+	// }
 
-	public function pembayaran()
-	{
-		$data['title'] = 'Pembayaran';
-		$this->load->view('pages/pembayaran', $data);
-	}
+	// public function pembayaran()
+	// {
+	// 	$data['title'] = 'Pembayaran';
+	// 	$this->load->view('pages/pembayaran', $data);
+	// }
 }

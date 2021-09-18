@@ -1,11 +1,13 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
 
-class Contact extends CI_Controller
+namespace App\Controllers;
+
+class Contact extends BaseController
 {
 
     public function index()
     {
+        $data['title'] = 'Contact';
         $this->load->view('email', $data);
     }
 
@@ -41,11 +43,11 @@ class Contact extends CI_Controller
                 $this->email->to($email);
                 $this->email->message($pesan);
 
-                if ($this->email->send()) {
-                    echo "Pesan berhasil dikirim..";
-                } else {
-                    show_error($this->email->print_debugger());
-                }
+                // if ($this->email->send()) {
+                //     echo "Pesan berhasil dikirim..";
+                // } else {
+                //     show_error($this->email->print_debugger());
+                // }
             }
         }
     }

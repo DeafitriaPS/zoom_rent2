@@ -22,7 +22,6 @@
                             <input class="form-control w-50 m-auto" type="file" name="images[]" id="select_image" accept="image/*" />
                         </form>
                     </div>
-                    <!-- </div> -->
                     </p>
                     <p><img src="gambar/" id="preview" class="img-thumbnail"></p>
                     <p><button type="submit" name="btn_simpan" class="btn btn-success">Kirim</button></p>
