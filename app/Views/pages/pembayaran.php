@@ -18,13 +18,35 @@
                     <p>Jika sudah melakukan transfer, segera<br> mengunggah bukti transfer</p>
                     <p>
                     <div class="row justify-content-center">
-                        <form method="post" id="upload_form">
-                            <input class="form-control w-50 m-auto" type="file" name="images[]" id="select_image" accept="image/*" />
+                        <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                            <div class="alert alert-danger" role="alert">
+                                <h4>Periksa Entrian Form</h4>
+                                </hr />
+                                <?php echo session()->getFlashdata('error'); ?>
+                            </div>
+                        <?php endif; ?>
+                        <form method="post" action="<?= base_url(); ?>/tamu/upload_bukti" enctype="multipart/form-data">
+                            <?= csrf_field(); ?>
+                            <div class="form-group">
+                                <label for="images">Upload Bukti</label>
+                                <input type="file" name="images[]" id='images' class="form-control w-50 m-auto">
+
+                            </div>
+                            <input type="submit" class="btn btn-success" value="Upload" />
                         </form>
+
+                        <!-- <div class="form-group">
+                            <label for="images">Upload Bukti</label>
+                            <input type="file" name="images[]" id='images' class="form-control w-50 m-auto">
+
+                        </div> -->
+
+                        <!-- <form method="post" id="upload_form">
+                            <input class="form-control w-50 m-auto" type="file" name="buktipembayaran" id="buktipembayaran" accept="image/*" />
+                        </form> -->
                     </div>
                     </p>
-                    <p><img src="gambar/" id="preview" class="img-thumbnail"></p>
-                    <p><button type="submit" name="btn_simpan" class="btn btn-success">Kirim</button></p>
+                    <!-- <p><button type="submit" name="btn_simpan" class="btn btn-success">Kirim</button></p> -->
                 </div>
             </div>
         </div>
