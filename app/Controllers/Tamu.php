@@ -21,7 +21,7 @@ class Tamu extends BaseController
 
 	public function save_formpesan()
 	{
-		$DataNoPembayaran = $this->tambahpembayaran();
+		$noPembayaran = $this->tambahpembayaran();
 		// $DataBukti = $this->upload_bukti();
 
 
@@ -32,7 +32,7 @@ class Tamu extends BaseController
 			'instansi' => $this->request->getVar('instansi'),
 			'alamat' => $this->request->getVar('alamat'),
 			'tanggalpeminjaman' => $this->request->getVar('tanggalpeminjaman'),
-			'no_pembayaran' => $DataNoPembayaran,
+			'no_pembayaran' => $noPembayaran,
 			'bukti' => $this->request->getVar('bukti')
 			// 'bukti' => $DataBukti
 		]);
@@ -118,11 +118,11 @@ class Tamu extends BaseController
 		// Generate no pembayaran
 		$cekPembayaran = $this->pesananModel->countPembayaran() + 1;
 
-		$DataNoPembayaran = 'P' . $cekPembayaran;
+		$noPembayaran = 'P' . $cekPembayaran;
 
 		// // Input Pembayaran
 		// $this->pesananModel->tambahDataPembayaran($noPembayaran);
-		return $DataNoPembayaran;
+		return $noPembayaran;
 	}
 
 	// public function tambah_formpesan()
